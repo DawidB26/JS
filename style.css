@@ -1,0 +1,58 @@
+body {
+ background-color: #2C2C2C;
+}
+
+html {
+    font-family: 'Mulish';
+    font-size: 12px;
+}
+
+.button {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+    color: #bbbbbb;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    max-width: 100px; 
+    width: 20%; 
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-flex;
+    justify-content: center;
+    transition: all 1.0s;
+}
+
+.button:hover {
+    color: aqua;
+}
+
+.button svg {
+    height: 30px;
+    left: 0;
+    top: 0; 
+    position: absolute;
+    width: 100%; 
+}
+
+.button rect{
+    fill: none;
+    stroke: #bbbbbb;
+    stroke-width: 3;
+    stroke-dasharray: 450, 0;
+    transition: all 1.0s linear;
+}
+
+.button:hover rect{
+    stroke-width: 4;
+    stroke-dasharray: 25, 300;
+    stroke-dashoffset: 155;
+    stroke: aqua;
+    transition: all 3s cubic-bezier(
+        0.22, 1, 0.25, 1
+    );
+}
