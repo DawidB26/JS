@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function okno_zamknij_brzeski()
+        {
+        window.close()
+        }
+    </script>
+  </head>
+  <body>
+    <form>
+      <textarea name="siejka" cols="80" rows="20" readonly>
+<html>
+    <head>
+    <title>
+    Przykład obliczenia Stala i Obwód walca
+    </title>
+	<style type="text/css">
+	body{
+	color: blue;
+	font-size: 25pt;
+	}
+ </style>
+    <script language="JavaScript">
+    function Lambda(a,b,c)
+    {
+    no=parseFloat(a)
+    t=parseFloat(b)
+    okr=parseFloat(c)
+    Stala_w=Math.LN2/okr;
+    pokaz1.innerHTML="Stala="+Stala_w.toFixed(7)+"("+Stala_w.toFixed(7)+")[1/rok]<br>"; /* do tabeli */
+    }
+    function N(a,b,c)
+    {
+    no=parseFloat(a)
+    t=parseFloat(b)
+    okr=parseFloat(c)
+    N_w=no*Math.pow(Math.E,-1*Stala_w*t);
+    pokaz2.innerHTML="N="+N_w.toFixed(7)+"[sztuk]<br>";
+    }
+    function okno_zamknij_brzeski()
+{
+window.close()
+}
+</script>
+    </head>
+    <body>
+    Obliczanie Stala i Obwód walca
+    <br> <br>
+    <form name="formularz" action="" onsubmit="Lambda(this.no.value,this.t.value,this.okr.value); N(this.no.value,this.t.value,this.okr.value);return false">
+    Podaj N0 =
+    <input size="6" name="no">
+    Podaj t =
+    <input size="6" name="t">
+    Podaj T1/2 =
+    <input size="6" name="okr">
+    <br> <br>
+    <input type="submit" value="oblicz" >
+    <br> <br>
+    </form>
+    <table style="color: blue; font-size: 25pt;">
+    <tr>
+    <td id="pokaz1"></td>
+    </tr>
+    <tr>
+    <td id="pokaz2"></td>
+    </tr>
+    </table>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_brzeski()"/>
+    </body>
+    </html><!--Dawid Brzeski 2P--> 
+      </textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_brzeski()"/>
+    <script type="text/javascript">
+    </script>
+  </body>
+</html>

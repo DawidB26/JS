@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<title>Brzeski</title>
+<script language="JavaScript">
+function Drabina(d,x)
+{
+ var d_brz=parseFloat(d)
+ var x_brz=parseFloat(x)
+ var Drabina=Math.sqrt(d_brz*d_brz+x_brz*x_brz);
+document.getElementsByName('drabina')[0].value= Drabina.toFixed(2);
+}
+function Alfa(d,x)
+{
+ var d_brz=parseFloat(d)
+ var x_brz=parseFloat(x)
+ var Alfa=(Math.atan(d_brz/x_brz)*180/Math.PI).toFixed(2);
+document.getElementsByName('alfa')[0].value= Alfa;
+}
+</script>
+<meta charset="utf-8">
+</head>
+<body>
+<p>Pobliczanie odległości od drabiny i kąta</p>
+<form name="formularz" onsubmit="Drabina(this.d.value, this.x.value); Alfa(this.d.value, this.x.value);
+return false">
+Podaj d=
+<input size="6" name="d">
+Podaj x=
+<input size="6" name="x">
+<br> <br>
+<input type="submit" Value="oblicz" >
+<br> <br>
+Drabina=
+<input size="6" name="drabina">
+Alfa=
+<input size="6" name="alfa">
+
+</form>
+</body>
+</html><!--Dawid Brzeski 2P--> 

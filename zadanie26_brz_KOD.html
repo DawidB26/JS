@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function okno_zamknij_brzeski()
+        {
+        window.close()
+        }
+    </script>
+  </head>
+  <body>
+    <form>
+      <textarea name="siejka" cols="80" rows="20" readonly>
+<html>
+<head>
+<title>
+Pole i obwod trapezu równoramiennego.
+<script language="JavaScript">
+function Pole_brzeski(a,b,wys)
+{
+c=parseFloat(a)
+d=parseFloat(b)
+e=parseFloat(wys)
+Pol_brz=c+d+(e/2)
+document.getElementsByName('pole')[0].value=Pol_brz.toFixed(2); /* na dokument */
+alert("Pole="+Pol_brz.toFixed(2)+" cm^2"); /*do okna Alert */
+pokaz1.innerHTML="Pole="+Pol_brz.toFixed(2)+" cm^2"+"<br>"; /* do tabeli */
+}
+function Obw_brzeski(a,b,wys)
+{
+c=parseFloat(a)
+d=parseFloat(b)
+e=parseFloat(wys)
+f=((d-c)*(d-c))+(e*e)
+Obwod_brz=c+d+(Math.sqrt(f)*2);
+document.getElementsByName('obw')[0].value=Obwod_brz.toFixed(2);
+alert("Obwod="+Obwod_brz.toFixed(2)+" cm");
+pokaz2.innerHTML="Obwod="+Obwod_brz.toFixed(2)+" cm"+"<br>";
+}   
+function okno_zamknij_brzeski()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+Obliczenie pola oraz obwodu trapez równoramiennego.
+<br> <br>
+<form name="formularz" action="" onsubmit="Pole_brzeski(this.bok_a.value,this.bok_b.value,this.wys.value); Obw_brzeski(this.bok_a.value,this.bok_b.value,this.wys.value); return false">
+Podaj a=
+<input size="6" name="bok_a">
+Podaj b=
+<input size="6" name="bok_b">
+Wysokosc=
+<input size="6" name="wys">
+<br> <br>
+<input type="submit" value="oblicz" >
+<br> <br>
+Pole=
+<input size="6" name="pole">
+Obwod=
+<input size="6" name="obw">
+</form>
+<table>
+<tr>
+<td id="pokaz1"></td>
+</tr>
+<tr>
+<td id="pokaz2"></td>
+</tr>
+</table>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_brzeski()"/>
+</body>
+<!-- Dawid Brzeski 2P -->
+      </textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_brzeski()"/>
+    <script type="text/javascript">
+    </script>
+  </body>
+</html>

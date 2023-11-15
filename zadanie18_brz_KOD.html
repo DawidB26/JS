@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function okno_zamknij_brzeski()
+        {
+        window.close()
+        }
+    </script>
+  </head>
+  <body>
+    <form>
+      <textarea name="siejka" cols="80" rows="20" readonly>
+<!DOCTYPE html>
+  <head>
+    <title> Użycie funkcji </title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div style="color:navy;font-size:50px;">
+      <script language="JavaScript">
+        var a=parseFloat(prompt("a=",""));
+        var b=parseFloat(prompt("b=",""));
+        function suma_brz(a, b) 
+	      {
+          return a + b;
+          }
+        document.write("suma=<br>"+suma_brz(a,b)+"<br>");
+		function odejmowanie_brz(a, b) 
+	      {
+          return a - b;
+          }
+		document.write("różnica=<br>"+odejmowanie_brz(a,b)+"<br>");
+		function mnozenie_brz(a, b) 
+	      {
+          return a * b;
+          }
+		document.write("iloczyn=<br>"+mnozenie_brz(a,b)+"<br>");
+		function do_kwadratu_brz(a, b) 
+	      {
+          return a * a;
+          return b * b;
+          }
+		document.write("do kwadratu:<br>"+do_kwadratu_brz(a,b)+"<br>");
+	    function reszta_z_dzielenia_brz(a, b) 
+	      {
+          return a % b;
+          }
+		document.write("reszta z dzielenia:<br>"+reszta_z_dzielenia_brz(a,b)+"<br>");
+      </script>
+    </div>
+  </body>
+</html><!--Dawid Brzeski 2P--> 
+      </textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_brzeski()"/>
+    <script type="text/javascript">
+    </script>
+  </body>
+</html>

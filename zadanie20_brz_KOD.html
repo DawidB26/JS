@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function okno_zamknij_brzeski()
+        {
+        window.close()
+        }
+    </script>
+  </head>
+  <body>
+    <form>
+      <textarea name="siejka" cols="80" rows="20" readonly>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+    function AB_brz()
+        {
+        var xa_brz= parseFloat(document.getElementById('współrzędną x punktu A').value);
+        var ya_brz= parseFloat(document.getElementById('współrzędną y punktu A').value);
+		var xb_brz= parseFloat(document.getElementById('współrzędną x punktu B').value);
+        var yb_brz= parseFloat(document.getElementById('współrzędną y punktu B').value);
+		var ab_brz= Math.sqrt(((Math.pow((xa_brz-xb_brz),2))+(Math.pow((ya_brz-yb_brz),2))));
+        document.getElementById("nazwa").innerHTML ="Długość boku AB wynosi= "+ab_brz.toFixed(2)+" cm";
+        }
+    function BC_brz()
+        {
+		var xb_brz= parseFloat(document.getElementById('współrzędną x punktu B').value);
+        var yb_brz= parseFloat(document.getElementById('współrzędną y punktu B').value);
+        var xc_brz= parseFloat(document.getElementById('współrzędną x punktu C').value);
+        var yc_brz= parseFloat(document.getElementById('współrzędną y punktu C').value);
+		var bc_brz= Math.sqrt(((Math.pow((xc_brz-xb_brz),2))+(Math.pow((yb_brz-yc_brz),2))));
+        document.getElementById("nazwa").innerHTML ="Długość boku BC wynosi= "+bc_brz.toFixed(2)+" cm";
+        }
+	function AC_brz()
+        {
+        var xa_brz= parseFloat(document.getElementById('współrzędną x punktu A').value);
+        var ya_brz= parseFloat(document.getElementById('współrzędną y punktu A').value);
+        var xc_brz= parseFloat(document.getElementById('współrzędną x punktu C').value);
+        var yc_brz= parseFloat(document.getElementById('współrzędną y punktu C').value);
+		var ac_brz= Math.sqrt(((Math.pow((xa_brz-xc_brz),2))+(Math.pow((ya_brz-yc_brz),2))));
+        document.getElementById("nazwa").innerHTML ="Długość boku AC wynosi= "+ac_brz.toFixed(2)+" cm";
+        }
+    </script>
+    <h1>Boki trójkąta</h1><br><br>
+    Podaj współrzędną x punktu A: <input type="text" id="współrzędną x punktu A" value="podaj x punktu A"><br><br><br>
+	Podaj współrzędną y punktu A: <input type="text" id="współrzędną y punktu A" value="podaj y punktu A"><br><br><br>
+	Podaj współrzędną x punktu B: <input type="text" id="współrzędną x punktu B" value="podaj x punktu B"><br><br><br>
+	Podaj współrzędną y punktu B: <input type="text" id="współrzędną y punktu B" value="podaj y punktu B"><br><br><br>
+	Podaj współrzędną x punktu C: <input type="text" id="współrzędną x punktu C" value="podaj x punktu C"><br><br><br>
+	Podaj współrzędną y punktu C: <input type="text" id="współrzędną y punktu C" value="podaj y punktu C"><br><br><br>
+    <input type="button" name="AB" value="Długość boku AB" Onclick="AB_brz()"><br><br>
+	<input type="button" name="BC" value="Długość boku BC" Onclick="BC_brz()"><br><br>
+	<input type="button" name="AC" value="Długość boku AC" Onclick="AC_brz()"><br><br>
+    <div style="color:red;font-size:50px;"id="nazwa"></div>
+  </body>
+</html><!--Dawid Brzeski 2P--> 
+      </textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_brzeski()"/>
+    <script type="text/javascript">
+    </script>
+  </body>
+</html>
