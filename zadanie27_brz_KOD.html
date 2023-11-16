@@ -1,6 +1,6 @@
 <html><body>
     <script>
-        function okno_zamknij_bilyi()
+        function okno_zamknij_brzeski()
 {
 window.close()
 }
@@ -8,70 +8,69 @@ window.close()
 <textarea cols="100%" rows="100%">
 
 
-        <html>
-                <head>
-                <title>
-                Przykład obliczenia Kat i Obwód walca
-                </title>
-                <script language="JavaScript">
-                function Kat(odl_bil,s_bil)
-                {
-                c=parseFloat(odl_bil)
-                d=parseFloat(s_bil)
-                // Przykładowa wartość sin a
-                var sinA = Math.sqrt((d*d)-(c*c))/d;
-                // Przeliczenie sin a na a w radianach
-                var aRad = Math.asin(sinA);
-                // Przeliczenie z radianów na stopnie
-                var aDeg = aRad * (180 / Math.PI);
-                Kat_w=aDeg;
-                document.getElementsByName('kat_bil')[0].value=Kat_w.toFixed(2); /* na dokument */
-                alert("Kat="+Kat_w.toFixed(2)); /*do okna Alert */
-                pokaz1.innerHTML="Kat="+Kat_w.toFixed(2)+"<br>"; /* do tabeli */
-                }
-                function Wys(odl_bil,s_bil)
-                {
-                c=parseFloat(odl_bil)
-                d=parseFloat(s_bil)
-                wys_w=Math.sqrt((d*d)-(c*c));
-                document.getElementsByName('h_bil')[0].value=wys_w.toFixed(2);
-                alert("h_bil="+wys_w.toFixed(2)+" cm");
-                pokaz2.innerHTML="h_bil="+wys_w.toFixed(2)+" cm"+"<br>";
-                }
-                function okno_zamknij_bilyi()
-                {
-                window.close()
-                }
-                </script>
-                </head>
-                <body>
-                Obliczanie Kat i Obwód walca
-                <br> <br>
-                <form name="formularz" action="" onsubmit="Kat(this.odl_bil.value,this.s_bil.value); Wys(this.odl_bil.value,this.s_bil.value);return false">
-                Odległość=
-                <input size="6" name="odl_bil">
-                Droga=
-                <input size="6" name="s_bil">
-                <br> <br>
-                <input type="submit" value="oblicz" >
-                <br> <br>
-                Kąt=
-                <input size="6" name="kat_bil">
-                Wysokość=
-                <input size="6" name="h_bil">
-                </form>
-                <table>
-                <tr>
-                <td id="pokaz1"></td>
-                </tr>
-                <tr>
-                <td id="pokaz2"></td>
-                </tr>
-                </table>
-                <input type="button" value="zamknij okno" onclick="okno_zamknij_bilyi()"/>
-                </body>
-                </html>
-                
+<html>
+<head>
+<title>
+Przykład obliczenia Kat i Obwód walca
+</title>
+<script language="JavaScript">
+function Kat(odl_brz,s_brz)
+{
+c=parseFloat(odl_brz)
+d=parseFloat(s_brz)
+// Przykładowa wartość sin a
+var sinA = Math.sqrt((d*d)-(c*c))/d;
+// Przeliczenie sin a na a w radianach
+var aRad = Math.asin(sinA);
+// Przeliczenie z radianów na stopnie
+var aDeg = aRad * (180 / Math.PI);
+Kat_w=aDeg;
+document.getElementsByName('kat_brz')[0].value=Kat_w.toFixed(2); /* na dokument */
+alert("Kat="+Kat_w.toFixed(2)); /*do okna Alert */
+pokaz1.innerHTML="Kat="+Kat_w.toFixed(2)+"<br>"; /* do tabeli */
+}
+function Wys(odl_brz,s_brz)
+{
+c=parseFloat(odl_brz)
+d=parseFloat(s_brz)
+wys_w=Math.sqrt((d*d)-(c*c));
+document.getElementsByName('h_brz')[0].value=wys_w.toFixed(2);
+alert("h_brz="+wys_w.toFixed(2)+" cm");
+pokaz2.innerHTML="h_brz="+wys_w.toFixed(2)+" cm"+"<br>";
+}
+function okno_zamknij_brzeski()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+Obliczanie Kat i Obwód walca
+<br> <br>
+<form name="formularz" action="" onsubmit="Kat(this.odl_brz.value,this.s_brz.value); Wys(this.odl_brz.value,this.s_brz.value);return false">
+Odległość=
+<input size="6" name="odl_brz">
+Droga=
+<input size="6" name="s_brz">
+<br> <br>
+<input type="submit" value="oblicz" >
+<br> <br>
+Kąt=
+<input size="6" name="kat_brz">
+Wysokość=
+<input size="6" name="h_brz">
+</form>
+<table>
+<tr>
+<td id="pokaz1"></td>
+</tr>
+<tr>
+<td id="pokaz2"></td>
+</tr>
+</table>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_brzeski()"/>
+</body>
+</html>
 </textarea>
-        <input type="button" value="zamknij okno" onclick="okno_zamknij_bilyi()"/>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_brzeski()"/>
 </body></html>
