@@ -5,7 +5,7 @@
 Przykład obliczenia Kat i Obwód walca
 </title>
 <script language="JavaScript">
-function Kat(odl_bil,s_brz)
+function Kat(odl_brz,s_brz)
 {
 c=parseFloat(odl_brz)
 d=parseFloat(s_brz)
@@ -16,7 +16,7 @@ var aRad = Math.asin(sinA);
 // Przeliczenie z radianów na stopnie
 var aDeg = aRad * (180 / Math.PI);
 Kat_w=aDeg;
-document.getElementsByName('kat_bil')[0].value=Kat_w.toFixed(2); /* na dokument */
+document.getElementsByName('kat_brz')[0].value=Kat_w.toFixed(2); /* na dokument */
 alert("Kat="+Kat_w.toFixed(2)); /*do okna Alert */
 pokaz1.innerHTML="Kat="+Kat_w.toFixed(2)+"<br>"; /* do tabeli */
 }
