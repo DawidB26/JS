@@ -1,23 +1,32 @@
 <html>
-  <head>
-    <script type="text/javascript">
-      var czlowiek = {
-      nazwisko: 'Nowacki',
-      imie: 'Marek',
-      zawod: 'informatyk',
-      pokaz: function ()
-        {
-          document.write(this.nazwisko + ' ' + this.imie)
-        }
-      }
-      czlowiek.pokaz();
-      czlowiek.wiek=19;
-      czlowiek.wypisz=function() {alert('Wiek: ' + this.wiek + 'lat')}
-      czlowiek.wypisz();
-    </script>
-  </head>
-  <body>
-    <br>
-    programowanie obiektowe
-  </body>
+ <head>
+ <script type="text/javascript">
+var wazon = {
+      kształt: 'prosokątny',
+      materiał: 'szklany',
+      kolor: 'niebieski',
+pokaz: function ()
+{ 
+ document.write(this.kształt + ' ' + this.kolor + ' ' + this.materiał)
+ }
+}
+wazon.pokaz();
+wazon.data=2019;
+wazon.wypisz=function() {alert('Wyprodukowany w: ' + this.data)}
+wazon.wypisz();
+
+wazon.waga='248';
+wazon.wazon_pokaz_brzeski=function() {alert('Waga (g): ' + this.waga)}
+wazon.wazon_pokaz_brzeski();
+  function okno_zamknij_brzeski()
+{
+window.close()
+}
+ </script>
+ </head>
+<body>
+<br>
+  
+<input type="button" value="zamknij okno" onclick="okno_zamknij_brzeski()"/>
+</body>
 </html>
