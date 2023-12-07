@@ -1,0 +1,39 @@
+<html>
+ <head>
+ <script type="text/javascript">
+var wazon = {
+kształt: 'prostokątny',
+materiał: 'szklany',
+}
+wazon.data=2019;
+wazon.wypisz=function() {alert('Wyprodukowany w: ' + this.data + 'r.')}
+wazon.wypisz();
+
+wazon.waga='248';
+wazon.wazon_pokaz_brzeski=function() {alert('Waga (g): ' + this.waga)}
+wazon.wazon_pokaz_brzeski();
+
+function klient(kształt_k,materiał_k,data_k)
+{
+this.kształt=kształt_k;
+this.materiał=materiał_k;
+this.data=data_k;
+}
+klient.prototype.wypisz = function ()
+{document.write(this.kształt + ' ' + this.materiał+ ' ' + this.data+"<br>");
+};
+var wazon1 = new klient("prostokątny", "szklany", "2019");
+var wazon2 = new klient('owalny', 'gliniany', '1998');
+wazon1.wypisz();
+wazon2.wypisz();
+  function okno_zamknij_brzeski()
+{
+window.close()
+}
+ </script>
+ </head>
+<body>
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_brzeski()"/>
+</body>
+</html>
