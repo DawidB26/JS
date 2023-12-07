@@ -1,0 +1,38 @@
+<html>
+<body>
+<textarea cols="100%" rows="100%">
+<html>
+ <head>
+ <script type="text/javascript">
+var wazon = {
+      kształt: 'prosokątny',
+      materiał: 'szklany',
+      kolor: 'niebieski',
+pokaz: function ()
+{ 
+ document.write(this.kształt + ' ' + this.kolor + ' ' + this.materiał)
+ }
+}
+wazon.pokaz();
+wazon.data=2019;
+wazon.wypisz=function() {alert('Wyprodukowany w: ' + this.data)}
+wazon.wypisz();
+
+wazon.waga='248';
+wazon.wazon_pokaz_brzeski=function() {alert('Waga (g): ' + this.waga)}
+wazon.wazon_pokaz_brzeski();
+  function okno_zamknij_brzeski()
+{
+window.close()
+}
+ </script>
+ </head>
+<body>
+<br>
+  
+<input type="button" value="zamknij okno" onclick="okno_zamknij_brzeski()"/>
+</body>
+</html>
+</textarea>
+</body>
+</html>
